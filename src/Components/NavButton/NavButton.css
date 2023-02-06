@@ -1,0 +1,29 @@
+.buttonContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 2rem;
+}
+
+.navLink {
+    height: 2rem;
+    display: flex;
+    border-radius: 15px;
+
+}
+.navLink .link {
+    width: 100%;
+    padding: 0 2rem;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonContainer a{
+    text-decoration: none;
+    color: rgb(88, 88, 88);
+    font-size: 1.2rem;
+}

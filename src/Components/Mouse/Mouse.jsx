@@ -15,6 +15,17 @@ export function Mouse({mousePos, mouseHovering}) {
             friction: 12,
             tension: 180
         }
+    });
+
+    const tag = useSpring({
+        top: mousePos.y + 20,
+        left: mousePos.x,
+        scale: mouseHovering ? 1 : 0,
+        config: {
+            friction: 12,
+            tension: 300
+        }
+        
     })
 
     return(
@@ -23,6 +34,11 @@ export function Mouse({mousePos, mouseHovering}) {
         style={outerMouse}
         className='outerMouse'
         >
+        </animated.div>
+        <animated.div
+        style={tag}
+        className='tag'>
+            <span>OPEN</span>
         </animated.div>
         </>
     )
