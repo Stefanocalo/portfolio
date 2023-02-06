@@ -1,0 +1,17 @@
+.navbarContainer {
+    width: 100%;
+    height: 4rem;
+    border: 1px solid rgba(88, 88, 88, 0.3);
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.navbarLinks {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}

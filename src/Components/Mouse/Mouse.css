@@ -1,0 +1,25 @@
+.outerMouse {
+   
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.innerMouse {
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+}
+
+@media only screen and (max-width: 900px) {
+    .outerMouse {
+        display: none;
+    }
+    .innerMouse {
+        display: none;
+    }
+}   
