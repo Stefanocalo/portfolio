@@ -3,16 +3,17 @@ import { useSpring, animated } from "@react-spring/web";
 import './Hamburger.css';
 
 export function Hamburger({setMouseHovering}) {
+
+    const [isOpen, setIsOpen] = useState(false);
     const [animate, setAnimate] = useState(false);
 
     useEffect(() => {
         if(!animate) {
             return
         }
-        console.log('ok')
         const timeoutId = setTimeout(() => {
             setAnimate(false);
-        },150);           
+        },50);           
 
         return () => {
             clearTimeout(timeoutId);
@@ -20,26 +21,29 @@ export function Hamburger({setMouseHovering}) {
     }, [animate])
 
     const topBar = useSpring({
-        transform: animate ? 'rotate(18deg)' : 'rotate(0deg)',
+        transform: isOpen || animate ? 'translateY(0.5rem) rotate(225deg)' : 'translateY(0rem) rotate(0deg)',
         config: {
-            friction: 12,
-            tension: 300
+            tension: 300,
+            mass: 1,
+            friction: 10,
         }
     })
 
     const lowBar = useSpring({
-        transform: animate ? 'rotate(-18deg)' : 'rotate(0deg)',
+        transform: isOpen || animate ? 'translateY(-0.55rem) rotate(-225deg)' : 'translateY(0rem) rotate(0deg)',
         config: {
-            friction: 12,
-            tension: 300
+            tension: 300,
+            mass: 1,
+            friction: 10,
         }
     })
 
     const middleBar = useSpring({
-        scale: animate ? 0.7 : 1,
+        scale: isOpen || animate ? 0 : 1,
         config: {
-            friction: 12,
-            tension: 300
+            tension: 200,
+            mass: 1,
+            friction: 14,
         }
     })
 
@@ -52,6 +56,7 @@ export function Hamburger({setMouseHovering}) {
         <div
         onMouseEnter={() => trigger()}
         onMouseLeave={() => setMouseHovering(false)}
+        onClick={() => setIsOpen(!isOpen)}
         className="hamburger">
            <animated.div
            style={topBar}
