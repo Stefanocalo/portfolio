@@ -43,13 +43,13 @@ export function Navbar({setMouseHovering}) {
     },[isOpen]);
 
     const list = useSpring({
-        height: isOpen ? '90vh' : '0',
+        height: isOpen ? '90vh' : '0vh',
         scale: isOpen ? 1 : 0,
         config: {
             tension: 180,
             friction: 15
         }
-    })
+    });
    
 
     return(
@@ -66,14 +66,20 @@ export function Navbar({setMouseHovering}) {
             </div>
            <div className="right">
                 <Hamburger setMouseHovering={setMouseHovering} isOpen={isOpen} setIsOpen={setIsOpen} />
-                <animated.ul
-                style={list}
+                <ul
                 className="navbarLinks">
                     <li><NavButton setMouseHovering={setMouseHovering} setIsOpen={setIsOpen} isOpen={isOpen} url={'about'}>About</NavButton></li>
                     <li><NavButton setMouseHovering={setMouseHovering} setIsOpen={setIsOpen} isOpen={isOpen} url={'projects'}>Projects</NavButton></li>
                     <li><NavButton setMouseHovering={setMouseHovering} setIsOpen={setIsOpen} isOpen={isOpen} url={'about'}>Contact</NavButton></li>
+                </ul>
+                </div>
+                <animated.ul
+                style={list}
+                className="mobileLinks">
+                    <li><NavButton setMouseHovering={setMouseHovering} setIsOpen={setIsOpen} isOpen={isOpen} url={'about'}>About</NavButton></li>
+                    <li><NavButton setMouseHovering={setMouseHovering} setIsOpen={setIsOpen} isOpen={isOpen} url={'projects'}>Projects</NavButton></li>
+                    <li><NavButton setMouseHovering={setMouseHovering} setIsOpen={setIsOpen} isOpen={isOpen} url={'about'}>Contact</NavButton></li>
                 </animated.ul>
-           </div>
         </animated.div>
     )
 }
