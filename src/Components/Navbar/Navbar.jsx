@@ -25,8 +25,8 @@ export function Navbar({setMouseHovering}) {
     const menu = useSpring({
         height: isOpen ? '100vh' : '6vh',
         config: {
-            friction: 12,
-            tension: 280
+            tension: 180,
+            friction: 15
         }
     })
 
