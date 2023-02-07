@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import { useSpring, animated } from "@react-spring/web";
 import './NavButton.css';
 
-export function NavButton({children, setMouseHovering}) {
+export function NavButton({children, setMouseHovering, url}) {
 
     const [animate, setAnimate] = useState(false);
     const [isHover, setIsHover] = useState(false);
@@ -32,9 +32,7 @@ export function NavButton({children, setMouseHovering}) {
     };
 
     const link = useSpring({
-        //border: isHover ? ' 1px solid rgba(88, 88, 88, 0.3)' :  ' 1px solid rgba(88, 88, 88, 0.0)',
-        scale: isHover? 1.3 : 1,
-        fontWeight: animate ? 500 : 400,
+        scale:  animate ? 1.3 : 1,
         config: {
             friction: 10,
             tension: 300
@@ -49,11 +47,12 @@ export function NavButton({children, setMouseHovering}) {
             <animated.div
             className="navLink"
             style={link}
+            onClick={() => setAnimate(true)}
             onMouseEnter={() => triggerEnter()}
             onMouseLeave={() => triggerLeave()}
             >
                 <a
-                className="link" href="#">{children}</a>
+                className="link" href={`#${url}`}>{children}</a>
             </animated.div>
         </div>
     )

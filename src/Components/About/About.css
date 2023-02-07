@@ -1,0 +1,10 @@
+.aboutContainer {
+    width: 90%;
+    height: 85vh;
+    padding: 3% 5% 0%;
+    overflow: hidden;
+    position: relative;
+}
+.sectionTitle {
+    font-size: 3rem;
+}

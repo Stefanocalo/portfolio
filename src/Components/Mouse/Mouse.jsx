@@ -38,7 +38,7 @@ export function Mouse({mousePos, mouseHovering}) {
         <animated.div
         style={tag}
         className='tag'>
-            <span>OPEN</span>
+            <span style={{color: 'white'}}>OPEN</span>
         </animated.div>
         </>
     )

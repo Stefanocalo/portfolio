@@ -1,0 +1,73 @@
+.bannerContainer {
+    width: 90%;
+    height: 85vh;
+    padding: 3% 5% 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative
+}
+
+.heroText {
+    z-index: -50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    backdrop-filter: blur(1rem);
+    border: 1px solid rgb(58, 58, 58);
+    border-radius: 15px;
+    padding: 1rem;
+    transform: translateY(7rem);
+}
+
+.heroPic {
+    height: 45rem;
+    z-index: -100;
+    position: absolute;
+    top: 2%
+}
+
+.bannerTitle {
+    text-transform: uppercase;
+}
+
+.bannerSub {
+    text-align: center;
+}
+
+.seeMore {
+    transform: translateY(9rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.icon {
+    font-size: 1.5rem;
+    transform: rotate(135deg);
+}
+
+.seeMore span {
+    text-align: center;
+}
+
+@media only screen and (max-width: 900px) {
+    .bannerContainer {
+        height: 90vh;
+    }
+    .heroPic {
+        height: 50rem;
+    }
+    .seeMore{
+        transform: translateY(14rem);
+    }
+    .seeMore span{
+        font-size: 1.2rem;
+    }
+}
+
+

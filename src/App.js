@@ -2,6 +2,8 @@
 import React, {useEffect, useState} from "react";
 import { Mouse } from "./Components/Mouse/Mouse";
 import { Navbar } from "./Components/Navbar/Navbar";
+import { Banner } from "./Components/Banner/Banner";
+import { About } from "./Components/About/About";
 
 function App() {
 
@@ -26,10 +28,12 @@ function App() {
  
 
   return (
-    <>
+    <div className="app">
       <Mouse mousePos={mousePos} mouseHovering={mouseHovering}/>
       <Navbar setMouseHovering={setMouseHovering} />
-    </>
+      <Banner setMouseHovering={setMouseHovering}/>
+      <About />
+    </div>
   );
 }
 
