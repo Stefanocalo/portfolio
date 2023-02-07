@@ -6,27 +6,13 @@ import './Navbar.css';
 
 export function Navbar({setMouseHovering}) {
 
-    const [logoHover, setLogoHover] = useState(false);  
     const [isOpen, setIsOpen] = useState(false);
-
-    function triggerEnter() {
-        setLogoHover(true);
-    }
-
-    function triggerLeave() {
-        setLogoHover(false);
-    }
-
-    const logo = useSpring({
-        scale: logoHover ? 1.5 : 1,
-
-    })
 
     const menu = useSpring({
         height: isOpen ? '100vh' : '6vh',
         config: {
             tension: 180,
-            friction: 15
+            friction: 20
         }
     })
 
@@ -58,11 +44,8 @@ export function Navbar({setMouseHovering}) {
         style={menu}
         >
             <div className="left">
-                <animated.span
-                style={logo}
-                onMouseEnter={() => triggerEnter()}
-                onMouseLeave={() => triggerLeave()}
-                className="logo">SC.</animated.span>
+                <span
+                className="logo">SC.</span>
             </div>
            <div className="right">
                 <Hamburger setMouseHovering={setMouseHovering} isOpen={isOpen} setIsOpen={setIsOpen} />

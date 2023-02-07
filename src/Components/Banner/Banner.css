@@ -64,6 +64,9 @@
     .heroPic {
         height: 50rem;
     }
+    .heroText {
+        transform: translateY(10rem);
+    }
     .seeMore{
         transform: translateY(11rem);
     }
