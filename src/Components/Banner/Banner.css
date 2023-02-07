@@ -59,6 +59,7 @@
 @media only screen and (max-width: 900px) {
     .bannerContainer {
         height: 90vh;
+        margin-top: 10vh;
     }
     .heroPic {
         height: 50rem;

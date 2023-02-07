@@ -2,9 +2,8 @@ import React, {useEffect, useState} from "react";
 import { useSpring, animated } from "@react-spring/web";
 import './Hamburger.css';
 
-export function Hamburger({setMouseHovering}) {
+export function Hamburger({setMouseHovering, isOpen, setIsOpen}) {
 
-    const [isOpen, setIsOpen] = useState(false);
     const [animate, setAnimate] = useState(false);
 
     useEffect(() => {

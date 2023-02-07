@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import { useSpring, animated } from "@react-spring/web";
 import './NavButton.css';
 
-export function NavButton({children, setMouseHovering, url}) {
+export function NavButton({children, setMouseHovering, url, setIsOpen, isOpen}) {
 
     const [animate, setAnimate] = useState(false);
     const [isHover, setIsHover] = useState(false);
@@ -40,6 +40,11 @@ export function NavButton({children, setMouseHovering, url}) {
 
     })
 
+    function handleClick() {
+        setAnimate(true);
+        isOpen && setIsOpen(false);
+    }
+
 
 
     return(
@@ -47,7 +52,7 @@ export function NavButton({children, setMouseHovering, url}) {
             <animated.div
             className="navLink"
             style={link}
-            onClick={() => setAnimate(true)}
+            onClick={() => handleClick()}
             onMouseEnter={() => triggerEnter()}
             onMouseLeave={() => triggerLeave()}
             >

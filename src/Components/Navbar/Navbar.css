@@ -30,3 +30,29 @@
     align-items: center;
     justify-content: space-around;
 }
+
+
+@media only screen and (max-width: 900px) {
+    .navbarContainer {
+        position: fixed;
+        top: 0;
+        z-index: 99;
+        height: 3rem;
+        background-color: rgba(88, 88, 88, 0.3);
+        backdrop-filter: blur(18px);
+        padding-top: 4vh;
+        align-items: flex-start;
+    }
+
+    .navbarLinks {
+        position: fixed;
+        top: 10vh;
+        right: 0;
+        height: 90vh;
+        width: 100vw;
+        padding: 0;
+        margin: 0;
+        flex-direction: column; 
+        z-index: 99;        
+    }
+}

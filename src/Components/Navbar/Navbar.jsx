@@ -7,6 +7,7 @@ import './Navbar.css';
 export function Navbar({setMouseHovering}) {
 
     const [logoHover, setLogoHover] = useState(false);  
+    const [isOpen, setIsOpen] = useState(false);
 
     function triggerEnter() {
         setLogoHover(true);
@@ -21,10 +22,32 @@ export function Navbar({setMouseHovering}) {
 
     })
 
+    const menu = useSpring({
+        height: isOpen ? '100vh' : '6vh',
+        config: {
+            friction: 15,
+            tension: 200
+        }
+    })
+
+    //Hamburger menu 
+
+
+    useEffect(() => {
+        if(!isOpen) {
+            document.body.style.overflow = 'auto';
+        } else {
+            document.body.style.overflow = 'hidden';
+        }
+
+    },[isOpen])
    
 
     return(
-        <div className="navbarContainer">
+        <animated.div 
+        className="navbarContainer"
+        style={menu}
+        >
             <div className="left">
                 <animated.span
                 style={logo}
@@ -32,15 +55,14 @@ export function Navbar({setMouseHovering}) {
                 onMouseLeave={() => triggerLeave()}
                 className="logo">SC.</animated.span>
             </div>
-           
-           <div className="left">
-                 <Hamburger setMouseHovering={setMouseHovering} />
+           <div className="right">
+                <Hamburger setMouseHovering={setMouseHovering} isOpen={isOpen} setIsOpen={setIsOpen} />
                 <ul className="navbarLinks">
-                    <li><NavButton setMouseHovering={setMouseHovering} url={'about'}>About</NavButton></li>
-                    <li><NavButton setMouseHovering={setMouseHovering} url={'projects'}>Projects</NavButton></li>
-                    <li><NavButton setMouseHovering={setMouseHovering} url={'about'}>Contact</NavButton></li>
+                    <li><NavButton setMouseHovering={setMouseHovering} setIsOpen={setIsOpen} isOpen={isOpen} url={'about'}>About</NavButton></li>
+                    <li><NavButton setMouseHovering={setMouseHovering} setIsOpen={setIsOpen} isOpen={isOpen} url={'projects'}>Projects</NavButton></li>
+                    <li><NavButton setMouseHovering={setMouseHovering} setIsOpen={setIsOpen} isOpen={isOpen} url={'about'}>Contact</NavButton></li>
                 </ul>
            </div>
-        </div>
+        </animated.div>
     )
 }
