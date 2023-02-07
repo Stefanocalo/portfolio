@@ -64,8 +64,8 @@ function App() {
       <Mouse mousePos={mousePos} mouseHovering={mouseHovering}/>
       <Navbar setMouseHovering={setMouseHovering} />
       <Banner setMouseHovering={setMouseHovering}/>
-      <About setAboutPos={setAboutPos} />
-      <Project setProjectPos={setProjectPos}/>
+      <About scrollY={scrollY} aboutPos={aboutPos} setAboutPos={setAboutPos} />
+      <Project scrollY={scrollY} setProjectPos={setProjectPos} projectPos={projectPos}/>
       <Background backgroundIndex={backgroundIndex}/>
       <ScrollTop scrollY={scrollY} aboutPos={aboutPos} setMouseHovering={setMouseHovering}/>
     </div>

@@ -1,7 +1,7 @@
-.aboutContainer {
+.sectionContainer {
     width: 90%;
     height: 120vh;
-    padding: 3% 5% 0%;
+    padding: 0% 5% ;
     overflow: hidden;
     position: relative;
 }

@@ -1,9 +1,28 @@
 import React, {useState, useRef, useEffect} from "react";
+import { useSpring, animated } from "@react-spring/web";
 import './Projects.css';
 
-export function Project({setProjectPos}) {
+export function Project({setProjectPos, projectPos, scrollY}) {
 
     const projectRef = useRef();
+
+    const [animateIn, setAnimateIn] = useState(false);
+
+    useEffect(() => {
+        if((projectPos*0.3 + scrollY) > projectPos) {
+            setAnimateIn(true);
+        }
+    },[scrollY])
+
+
+    const animateEnter = useSpring({
+        opacity: animateIn ? 1 : 0,
+        transform: animateIn ? 'translateY(0px)' : 'translateY(100px)',
+        config: {
+            tension: 300,
+            friction: 15
+        }
+    })
 
     const getPosition = () => {
         const y = projectRef.current.offsetTop
@@ -21,9 +40,10 @@ export function Project({setProjectPos}) {
     }, []);
 
     return( 
-        <section
+        <animated.section
+        style={animateEnter}
         ref={projectRef}
-        id="projects" className="aboutContainer">
+        id="projects" className="sectionContainer">
             <h2 className="sectionTitle">.Projects</h2>
             <article>
                 <p >ckanca ikaenfnao nfianfanneoa noafnoafmn oam</p>
@@ -44,6 +64,6 @@ export function Project({setProjectPos}) {
 
 
             </article>
-        </section>
+        </animated.section>
     )
 }
