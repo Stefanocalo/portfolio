@@ -6,7 +6,6 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 2.5%;
-    overflow: hidden;
 }
 
 .logo {
@@ -42,13 +41,13 @@
         backdrop-filter: blur(18px);
         padding-top: 4vh;
         align-items: flex-start;
+        overflow: hidden;
     }
 
     .navbarLinks {
         position: fixed;
         top: 10vh;
         right: 0;
-        height: 90vh;
         width: 100vw;
         padding: 0;
         margin: 0;

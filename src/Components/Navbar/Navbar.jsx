@@ -25,8 +25,8 @@ export function Navbar({setMouseHovering}) {
     const menu = useSpring({
         height: isOpen ? '100vh' : '6vh',
         config: {
-            friction: 15,
-            tension: 200
+            friction: 12,
+            tension: 280
         }
     })
 
@@ -40,7 +40,16 @@ export function Navbar({setMouseHovering}) {
             document.body.style.overflow = 'hidden';
         }
 
-    },[isOpen])
+    },[isOpen]);
+
+    const list = useSpring({
+        height: isOpen ? '90vh' : '0',
+        scale: isOpen ? 1 : 0,
+        config: {
+            tension: 180,
+            friction: 15
+        }
+    })
    
 
     return(
@@ -57,11 +66,13 @@ export function Navbar({setMouseHovering}) {
             </div>
            <div className="right">
                 <Hamburger setMouseHovering={setMouseHovering} isOpen={isOpen} setIsOpen={setIsOpen} />
-                <ul className="navbarLinks">
+                <animated.ul
+                style={list}
+                className="navbarLinks">
                     <li><NavButton setMouseHovering={setMouseHovering} setIsOpen={setIsOpen} isOpen={isOpen} url={'about'}>About</NavButton></li>
                     <li><NavButton setMouseHovering={setMouseHovering} setIsOpen={setIsOpen} isOpen={isOpen} url={'projects'}>Projects</NavButton></li>
                     <li><NavButton setMouseHovering={setMouseHovering} setIsOpen={setIsOpen} isOpen={isOpen} url={'about'}>Contact</NavButton></li>
-                </ul>
+                </animated.ul>
            </div>
         </animated.div>
     )
