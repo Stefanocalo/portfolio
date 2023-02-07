@@ -10,12 +10,10 @@ export function Navbar({setMouseHovering}) {
 
     function triggerEnter() {
         setLogoHover(true);
-        setMouseHovering(true);
     }
 
     function triggerLeave() {
         setLogoHover(false);
-        setMouseHovering(false)
     }
 
     const logo = useSpring({
@@ -28,11 +26,11 @@ export function Navbar({setMouseHovering}) {
     return(
         <div className="navbarContainer">
             <div className="left">
-                <animated.a
+                <animated.span
                 style={logo}
                 onMouseEnter={() => triggerEnter()}
                 onMouseLeave={() => triggerLeave()}
-                href="#" className="logo">SC.</animated.a>
+                className="logo">SC.</animated.span>
             </div>
            
            <div className="left">

@@ -1,7 +1,7 @@
 .scrollTopContainer {
     width: 4rem;
     height: 4rem;
-    border: 1px solid rgb(58, 58, 58);
+    border: 1px solid rgba(88, 88, 88, 0.3);
     position: fixed;
     right: 2rem;
     border-radius: 50%;
