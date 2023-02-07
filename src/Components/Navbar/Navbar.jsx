@@ -39,7 +39,7 @@ export function Navbar({setMouseHovering}) {
                  <Hamburger setMouseHovering={setMouseHovering} />
                 <ul className="navbarLinks">
                     <li><NavButton setMouseHovering={setMouseHovering} url={'about'}>About</NavButton></li>
-                    <li><NavButton setMouseHovering={setMouseHovering} url={'about'}>Projects</NavButton></li>
+                    <li><NavButton setMouseHovering={setMouseHovering} url={'projects'}>Projects</NavButton></li>
                     <li><NavButton setMouseHovering={setMouseHovering} url={'about'}>Contact</NavButton></li>
                 </ul>
            </div>

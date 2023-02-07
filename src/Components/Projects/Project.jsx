@@ -1,13 +1,13 @@
 import React, {useState, useRef, useEffect} from "react";
-import './About.css';
+import './Projects.css';
 
-export function About({setAboutPos}) {
+export function Project({setProjectPos}) {
 
-    const aboutRef = useRef();
+    const projectRef = useRef();
 
     const getPosition = () => {
-        const y = aboutRef.current.offsetTop
-        setAboutPos(y)
+        const y = projectRef.current.offsetTop
+        setProjectPos(y)
     };
 
     useEffect(() => {
@@ -22,9 +22,9 @@ export function About({setAboutPos}) {
 
     return( 
         <section
-        ref={aboutRef}
-        id="about" className="aboutContainer">
-            <h2 className="sectionTitle">.About Me</h2>
+        ref={projectRef}
+        id="projects" className="aboutContainer">
+            <h2 className="sectionTitle">.Projects</h2>
             <article>
                 <p >ckanca ikaenfnao nfianfanneoa noafnoafmn oam</p>
                 <p >ckanca ikaenfnao nfianfanneoa noafnoafmn oam</p>
