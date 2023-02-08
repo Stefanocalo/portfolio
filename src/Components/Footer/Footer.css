@@ -1,3 +1,51 @@
 .footerContainer {
-    
+    height: 20vh;
+    background-color: rgba(58, 58, 58, 0.1);
+    width: 90%;
+    backdrop-filter: blur(0.2rem);
+    z-index: -100;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgb(58, 58, 58);
+}
+
+.footerSection,
+.copyright {
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copy {
+    display: flex;
+    align-items: center;
+}
+
+.footerIcon {
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    cursor: pointer;
+    color: rgb(58, 58, 58);
+}
+
+.footerLink {
+    text-decoration: none;
+    cursor: pointer;
+    color: rgb(58, 58, 58);
+    margin: 0 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .footerContainer {
+        height: 10vh;
+        justify-content: center;
+    }
+
+    .footerSection {
+        display: none;
+    }
 }

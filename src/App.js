@@ -14,6 +14,7 @@ function App() {
 
   const [mousePos, setMousePos] = useState([]);
   const [mouseHovering, setMouseHovering] = useState(false);
+  const [isBottom, setIsBottom] = useState(false);
 
   //Mapping mouse position
   useEffect(() => {
@@ -72,9 +73,9 @@ function App() {
       <About scrollY={scrollY} aboutPos={aboutPos} setAboutPos={setAboutPos} />
       <Project scrollY={scrollY} setProjectPos={setProjectPos} projectPos={projectPos}/>
       <Contact setMouseHovering={setMouseHovering} scrollY={scrollY} contactPos={contactPos} setContactPos={setContactPos} />
-      <Footer />
+      <Footer scrollY={scrollY} setIsBottom={setIsBottom}/>
       <Background backgroundIndex={backgroundIndex}/>
-      <ScrollTop scrollY={scrollY} aboutPos={aboutPos} setMouseHovering={setMouseHovering}/>
+      <ScrollTop isBottom={isBottom} scrollY={scrollY} aboutPos={aboutPos} setMouseHovering={setMouseHovering}/>
     </div>
   );
 }

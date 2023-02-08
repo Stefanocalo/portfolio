@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import { useSpring, animated } from "@react-spring/web";
 import './ScrollTop.css';
 
-export function ScrollTop({scrollY, aboutPos, setMouseHovering}) {
+export function ScrollTop({scrollY, aboutPos, setMouseHovering, isBottom}) {
 
     const [show, setShow] = useState(false);
     const [animate, setAnimate] = useState(false);
@@ -38,6 +38,7 @@ export function ScrollTop({scrollY, aboutPos, setMouseHovering}) {
     const scrollTop = useSpring({
         bottom: show ? '2rem' : '-7rem',
         scale: animate ? '1.2' : '1',
+        transform: isBottom ? 'translateY(-10vh)' : 'translateY(0vh)',
         config: {
             tension: 300,
             friction: 12

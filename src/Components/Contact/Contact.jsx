@@ -98,12 +98,12 @@ export function Contact({setContactPos, scrollY, contactPos, setMouseHovering}) 
                         className='contactType'>Linkedin</animated.span>
                     </div>
                     <div className="iconContainer">
-                        <a url="mailto:anyemail@email.com" target='_blank'><SiGmail 
+                        <SiGmail 
                         className="contactIcon"
                         onClick={() => window.open('https://mail.google.com/mail/?view=cm&fs=1&to=stefano.cal92@gmail.com')}
                         onMouseEnter={() => triggerGmail(true)}
                         onMouseLeave={() => triggerGmail(false)}
-                        /></a>
+                        />
                         <animated.span
                         style={gmail}
                         className='contactType'>Gmail</animated.span>
