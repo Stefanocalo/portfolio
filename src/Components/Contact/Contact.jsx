@@ -3,6 +3,7 @@ import { useSpring, animated } from "@react-spring/web";
 import './Contact.css';
 import {AiFillLinkedin} from 'react-icons/ai';
 import {SiGmail} from 'react-icons/si';
+import {AiFillGithub} from 'react-icons/ai';
 
 export function Contact({setContactPos, scrollY, contactPos, setMouseHovering}) {
 
@@ -11,6 +12,7 @@ export function Contact({setContactPos, scrollY, contactPos, setMouseHovering}) 
     const [animateIn, setAnimateIn] = useState(false);
     const [popLinkedin, setPopLinkedin] = useState(false);
     const [popGmail, setPopGmail] = useState(false);
+    const [popGithub, setPopGithub] = useState(false);
 
     useEffect(() => {
         if((contactPos *0.2) + scrollY > contactPos) {
@@ -61,6 +63,16 @@ export function Contact({setContactPos, scrollY, contactPos, setMouseHovering}) 
             tension: 300
         }
 
+    });
+
+    const github = useSpring({
+        opacity: popGithub ? 1 : 0,
+        scale: popGithub ? 1 : 0,
+        config: {
+            friction: 12,
+            tension: 300
+        }
+
     })
 
     function triggerLinkedin(instruction) {
@@ -71,6 +83,11 @@ export function Contact({setContactPos, scrollY, contactPos, setMouseHovering}) 
     function triggerGmail(instruction) {
         setMouseHovering(instruction);
         setPopGmail(instruction);
+    }
+
+    function triggerGitHub(instruction) {
+        setMouseHovering(instruction);
+        setPopGithub(instruction);
     }
 
 
@@ -107,6 +124,17 @@ export function Contact({setContactPos, scrollY, contactPos, setMouseHovering}) 
                         <animated.span
                         style={gmail}
                         className='contactType'>Gmail</animated.span>
+                    </div>
+                    <div className="iconContainer">
+                        <AiFillGithub 
+                        className="contactIcon"
+                        onClick={() => window.open('https://github.com/Stefanocalo?tab=repositories')}
+                        onMouseEnter={() => triggerGitHub(true)}
+                        onMouseLeave={() => triggerGitHub(false)}
+                        />
+                        <animated.span
+                        style={github}
+                        className='contactType'>GitHub</animated.span>
                     </div>
                 </div>
             </article>
