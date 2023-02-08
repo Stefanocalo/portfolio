@@ -4,12 +4,13 @@ import { NavButton } from "../NavButton/NavButton";
 import { Hamburger } from "../Hamburger/Hamburger";
 import './Navbar.css';
 
-export function Navbar({setMouseHovering}) {
+export function Navbar({setMouseHovering, active}) {
 
     const [isOpen, setIsOpen] = useState(false);
 
     const menu = useSpring({
         height: isOpen ? '100vh' : '6vh',
+        top: active ? '-100%' : '0%',
         config: {
             tension: 180,
             friction: 20

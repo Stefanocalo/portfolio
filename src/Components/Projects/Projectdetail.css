@@ -1,0 +1,115 @@
+.projectExpandContainer {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(0.4rem);
+    display: flex;
+    justify-content: end;
+    color: rgb(58, 58, 58);
+}
+
+.projectWrapper {
+    height: 96%;
+    width: 50%;
+    background-color: rgb(240, 240, 240);
+    padding: 2%;
+    overflow-y: scroll;
+}
+
+.nav {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(58, 58, 58, 0.4);
+    padding: 1rem 0;
+    width: 50%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgb(240, 240, 240);
+    z-index: 99;
+    padding: 2%
+}
+
+.backIcon {
+    display: flex;
+    align-items: center;
+}
+
+.subSection {
+    margin: 3rem 0;
+}
+
+.sub {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.tags {
+    margin: 1rem 0;
+    display: flex;
+}
+
+.detailFooter {
+    height: 10vh;
+    background-color: rgba(143, 143, 143, 0.4);
+    backdrop-filter: blur(0.4rem);
+    width: 54%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    cursor: pointer;
+}
+
+.footerDetails {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.linkIcon {
+    font-size: 2rem;
+    margin: 0 0.5rem;
+}
+
+.imgContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 0;
+}
+
+.projectPic {
+    width: 90%;
+    border-radius: 15px;
+}
+
+.website {
+    padding-bottom: 10vh;
+}
+
+
+@media only screen and (max-width: 900px) {
+    .projectWrapper {
+        width: 100%;
+        padding: 10% 5%;
+    }
+
+    .detailFooter {
+        width: 100%;
+    }
+
+    .projectPic {
+        width: 100%;
+    }
+
+    .nav {
+        width: 92%;
+        padding: 4%;
+    }
+    
+}

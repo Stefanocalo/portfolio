@@ -9,6 +9,7 @@ import { Contact } from "./Components/Contact/Contact";
 import { Footer } from "./Components/Footer/Footer";
 import { Background } from "./Components/Background/Background";
 import { ScrollTop } from "./Components/ScrollTop/ScrollTop";
+import { ProjectDetail } from "./Components/Projects/Projectdetail";
 
 function App() {
 
@@ -62,20 +63,26 @@ function App() {
     } else {
       setBackgroundIndex(0)
     }
-  },[scrollY])
+  },[scrollY]);
+
+  //Project Modal
+
+  const [active, setActive] = useState(false);
+  const [data, setData] = useState([]);
  
 
   return (
     <div className="app">
       <Mouse mousePos={mousePos} mouseHovering={mouseHovering}/>
-      <Navbar setMouseHovering={setMouseHovering} />
+      <Navbar active={active} setMouseHovering={setMouseHovering} />
       <Banner setMouseHovering={setMouseHovering}/>
       <About scrollY={scrollY} aboutPos={aboutPos} setAboutPos={setAboutPos} />
-      <Project scrollY={scrollY} setProjectPos={setProjectPos} projectPos={projectPos}/>
+      <Project setData={setData} setActive={setActive} scrollY={scrollY} setProjectPos={setProjectPos} projectPos={projectPos}/>
       <Contact setMouseHovering={setMouseHovering} scrollY={scrollY} contactPos={contactPos} setContactPos={setContactPos} />
       <Footer scrollY={scrollY} setIsBottom={setIsBottom}/>
       <Background backgroundIndex={backgroundIndex}/>
       <ScrollTop isBottom={isBottom} scrollY={scrollY} aboutPos={aboutPos} setMouseHovering={setMouseHovering}/>
+      <ProjectDetail active={active} setActive={setActive} data={data} />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import { useSpring, animated } from "@react-spring/web";
 
-export function Card({title, description, tags, src, offset, width}) {
+export function Card({title, description, tags, src, offset, width, setData, setActive}) {
 
     const [expand,setExpand] = useState(false);
 
@@ -27,9 +27,16 @@ export function Card({title, description, tags, src, offset, width}) {
         }
     });
 
-    const transform = offset && 'translateY(50%)'
+    const transform = offset && 'translateY(50%)';
+
+    function handleClick() {
+        setActive(true);
+        setData([title, description, tags, src]);
+    }
+
 
     return(
+        <>
         <div
         style={{transform: transform}}
         onMouseEnter={() => setExpand(true)}
@@ -38,7 +45,7 @@ export function Card({title, description, tags, src, offset, width}) {
         <img className="projectPic" src={src} alt='Stefano Calo picture'/>
         <animated.div
         style={info}
-       
+        onClick={() => handleClick()}
         className='info'
         >
             <h3 className="projectTitle">{title}</h3>
@@ -50,5 +57,6 @@ export function Card({title, description, tags, src, offset, width}) {
             </div>
         </animated.div>
         </div>
+        </>
     )
 }

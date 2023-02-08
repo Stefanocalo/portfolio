@@ -8,7 +8,7 @@ import todo from '../media/todo.png';
 import memory from '../media/memory.png';
 import portfolio from '../media/portfolio.png';
 
-export function Project({setProjectPos, projectPos, scrollY}) {
+export function Project({setProjectPos, projectPos, scrollY, setData, setActive}) {
 
     const projectRef = useRef();
 
@@ -71,10 +71,6 @@ export function Project({setProjectPos, projectPos, scrollY}) {
         }
     },[width])
 
-
-    console.log(offset)
-
-
     return( 
         <animated.section
         style={animateEnter}
@@ -84,6 +80,9 @@ export function Project({setProjectPos, projectPos, scrollY}) {
             <article>
               <div className="projectsContainer">
                     <Card
+                    setData={setData}
+                    setActive={setActive}
+                    scrollY={scrollY}
                     width={width} 
                     offset={false}
                     title={'Reddit Client'}
@@ -92,6 +91,8 @@ export function Project({setProjectPos, projectPos, scrollY}) {
                     tags={['React', 'JavaScript', 'CSS']}
                     />
                     <Card 
+                    setData={setData}
+                    setActive={setActive}
                     width={width} 
                     offset={offset}
                     title={'To-do App'}
@@ -99,7 +100,9 @@ export function Project({setProjectPos, projectPos, scrollY}) {
                     description={'A to-do app to help you avoid procrastination.'}
                     tags={['React', 'JavaScript', 'CSS']}
                     />
-                     <Card 
+                    <Card
+                    setData={setData}
+                    setActive={setActive}
                     width={width}
                     offset={false}
                     title={'Weather App'}
@@ -107,7 +110,9 @@ export function Project({setProjectPos, projectPos, scrollY}) {
                     description={`A complete weather app. Let's check if we need a jumper or a t-shirt.`}
                     tags={['React', 'JavaScript', 'CSS']}
                     />
-                    <Card 
+                    <Card
+                    setData={setData}
+                    setActive={setActive} 
                     width={width}
                     offset={offset}
                     title={'Memory Game'}
@@ -116,6 +121,8 @@ export function Project({setProjectPos, projectPos, scrollY}) {
                     tags={['React', 'JavaScript', 'CSS']}
                     />
                     <Card
+                    setData={setData}
+                    setActive={setActive}
                     width={width} 
                     offset={false}
                     title={'Personal Portfolio'}
