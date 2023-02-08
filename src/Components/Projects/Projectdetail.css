@@ -62,6 +62,11 @@
     right: 0;
     display: flex;
     cursor: pointer;
+    transition: 0.3s;
+}
+
+.detailFooter:hover {
+    background-color: rgba(39, 39, 39, 0.4);
 }
 
 .footerDetails {
@@ -86,10 +91,15 @@
 .projectPic {
     width: 90%;
     border-radius: 15px;
+    cursor: pointer;
 }
 
 .website {
     padding-bottom: 10vh;
+}
+
+.siteLink {
+    margin: 2rem 0;
 }
 
 

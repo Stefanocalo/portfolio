@@ -55,6 +55,7 @@ export function ProjectDetail({active, setActive, data, src}) {
             friction: 10
         }
     });
+
     
     return(
         <animated.div
@@ -79,7 +80,9 @@ export function ProjectDetail({active, setActive, data, src}) {
                         <div className='subSection'>
                             <h3 className="projectTitle">{data[0]}</h3>
                             <span className="description">{data[1]}</span> 
-                            <div className="imgContainer">
+                            <div
+                            onClick={() => window.open(`${data[5]}`)}
+                            className="imgContainer">
                                 <img className="projectPic" src={data[3]} alt='Stefano Calo picture'/>
                             </div>
                         </div>
@@ -89,16 +92,21 @@ export function ProjectDetail({active, setActive, data, src}) {
                         <div className="subSection">
                             <span className="sub">Technologies</span>
                             <div className="tags">
-                              {data[2]?.map(tag => (
-                                    <span className='language'>{tag}</span>
+                              {data[2]?.map((tag, index) => (
+                                    <span key={index} className='language'>{tag}</span>
                               ))}
                             </div>
                             <div className="subSecton website">
-                                <span className="sub">Website </span>
-                                <GiWorld />
+                                <div className="siteLink">
+                                    <span className="sub">Website </span>
+                                    <GiWorld />
+                                </div>
+                                <a href={data[5]} target='_blank'>{data[5]}</a>
                             </div>
                             <div className="detailFooter">
-                                <div className="footerDetails">
+                                <div 
+                                onClick={() => window.open(`${data[4]}`)}
+                                className="footerDetails">
                                     <AiFillGithub className="linkIcon"/>
                                     <span>Check the code on GitHub</span>
                                 </div>

@@ -87,6 +87,8 @@ export function Project({setProjectPos, projectPos, scrollY, setData, setActive}
                     offset={false}
                     title={'Reddit Client'}
                     src={reddit}
+                    code={'https://github.com/Stefanocalo/Reddit-Client'}
+                    link={'https://reddit-lite-client.netlify.app'}
                     description={'A Reddit Client that let you explre the social without the need to log in.'}
                     tags={['React', 'JavaScript', 'CSS']}
                     />
@@ -97,6 +99,8 @@ export function Project({setProjectPos, projectPos, scrollY, setData, setActive}
                     offset={offset}
                     title={'To-do App'}
                     src={todo}
+                    link={'https://to-do-task-app.netlify.app'}
+                    code={'https://github.com/Stefanocalo/to-do-app'}
                     description={'A to-do app to help you avoid procrastination.'}
                     tags={['React', 'JavaScript', 'CSS']}
                     />
@@ -107,6 +111,8 @@ export function Project({setProjectPos, projectPos, scrollY, setData, setActive}
                     offset={false}
                     title={'Weather App'}
                     src={weather}
+                    code={'https://github.com/Stefanocalo/weather-app'}
+                    link={'https://city-forecast-app.netlify.app'}
                     description={`A complete weather app. Let's check if we need a jumper or a t-shirt.`}
                     tags={['React', 'JavaScript', 'CSS']}
                     />
@@ -117,6 +123,8 @@ export function Project({setProjectPos, projectPos, scrollY, setData, setActive}
                     offset={offset}
                     title={'Memory Game'}
                     src={memory}
+                    code={'https://github.com/Stefanocalo/memory-game'}
+                    link={'https://rick-memory.netlify.app'}
                     description={'A simple game to keep your mind sharp.'}
                     tags={['React', 'JavaScript', 'CSS']}
                     />
@@ -127,6 +135,8 @@ export function Project({setProjectPos, projectPos, scrollY, setData, setActive}
                     offset={false}
                     title={'Personal Portfolio'}
                     src={portfolio}
+                    code={'https://github.com/Stefanocalo/portfolio'}
+                    link={'https://stefanocalo.me'}
                     description={'A glimpse of me.'}
                     tags={['React', 'JavaScript', 'CSS']}
                     />
