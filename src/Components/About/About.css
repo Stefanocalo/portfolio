@@ -1,6 +1,5 @@
 .sectionContainer {
     width: 90%;
-    height: 120vh;
     padding: 0% 5% ;
     overflow: hidden;
     position: relative;
@@ -8,4 +7,12 @@
 .sectionTitle {
     font-size: 3rem;
     margin-top: 5rem;
+}
+
+article {
+    margin: 0 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }

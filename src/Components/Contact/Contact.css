@@ -1,0 +1,30 @@
+.contactMe {
+    font-size: 1.4rem;
+    color: rgb(58, 58, 58);
+}
+
+.contactContainer {
+    margin: 5rem 0;
+    display: flex;
+}
+
+.contactIcon {
+    font-size: 3rem;
+    color: rgb(58, 58, 58);
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.iconContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contactType {
+    background-color: rgb(58, 58, 58);
+    color: rgb(240, 240, 240);
+    padding: 0.2rem;
+    border-radius: 15px;
+}

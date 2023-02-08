@@ -9,7 +9,7 @@ export function Project({setProjectPos, projectPos, scrollY}) {
     const [animateIn, setAnimateIn] = useState(false);
 
     useEffect(() => {
-        if((projectPos*0.3 + scrollY) > projectPos) {
+        if((projectPos*0.25 + scrollY) > projectPos) {
             setAnimateIn(true);
         }
     },[scrollY])
@@ -20,7 +20,7 @@ export function Project({setProjectPos, projectPos, scrollY}) {
         transform: animateIn ? 'translateY(0px)' : 'translateY(100px)',
         config: {
             tension: 300,
-            friction: 15
+            friction: 11
         }
     })
 
