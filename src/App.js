@@ -77,7 +77,7 @@ function App() {
       <Navbar active={active} setMouseHovering={setMouseHovering} />
       <Banner setMouseHovering={setMouseHovering}/>
       <About scrollY={scrollY} aboutPos={aboutPos} setAboutPos={setAboutPos} />
-      <Project setData={setData} setActive={setActive} scrollY={scrollY} setProjectPos={setProjectPos} projectPos={projectPos}/>
+      <Project setMouseHovering={setMouseHovering} setData={setData} setActive={setActive} scrollY={scrollY} setProjectPos={setProjectPos} projectPos={projectPos}/>
       <Contact setMouseHovering={setMouseHovering} scrollY={scrollY} contactPos={contactPos} setContactPos={setContactPos} />
       <Footer scrollY={scrollY} setIsBottom={setIsBottom}/>
       <Background backgroundIndex={backgroundIndex}/>

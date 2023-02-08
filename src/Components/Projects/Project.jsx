@@ -7,8 +7,9 @@ import weather from '../media/weather.png';
 import todo from '../media/todo.png';
 import memory from '../media/memory.png';
 import portfolio from '../media/portfolio.png';
+import { AiFillGithub } from "react-icons/ai";
 
-export function Project({setProjectPos, projectPos, scrollY, setData, setActive}) {
+export function Project({setProjectPos, projectPos, scrollY, setData, setActive, setMouseHovering}) {
 
     const projectRef = useRef();
 
@@ -70,6 +71,35 @@ export function Project({setProjectPos, projectPos, scrollY, setData, setActive}
             setOffset(true)
         }
     },[width])
+
+    //Animate
+
+    const [animate, setAnimate] = useState(false)
+
+    function triggerMouseHover(instruction) {
+        setMouseHovering(instruction);
+        setAnimate(instruction)
+    };
+
+    useEffect(() => {
+        if(animate) {
+            const timeoutId = setTimeout(() => {
+                setAnimate(false);
+            },150)
+
+            return () => {
+                clearTimeout(timeoutId);
+            }
+        }
+    },[animate])
+
+    const git = useSpring({
+        scale: animate ? 1.3 : 1,
+        config: {
+            tension: 300,
+            friction: 10
+        }
+    })
 
     return( 
         <animated.section
@@ -140,7 +170,16 @@ export function Project({setProjectPos, projectPos, scrollY, setData, setActive}
                     description={'A glimpse of me.'}
                     tags={['React', 'JavaScript', 'CSS']}
                     />
-              </div>
+                </div>
+                <animated.div
+                onClick={() => window.open(`https://github.com/Stefanocalo`)}
+                style={git}
+                onMouseEnter={() => triggerMouseHover(true)}
+                onMouseLeave={() => triggerMouseHover(false)}
+                className="githubWrapper">
+                    <AiFillGithub className="linkIcon"/>
+                    <span>Check my GitHub profile</span>
+                </animated.div>
 
             </article>
         </animated.section>
