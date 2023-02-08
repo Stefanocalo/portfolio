@@ -53,7 +53,7 @@ export function Navbar({setMouseHovering}) {
                 className="navbarLinks">
                     <li><NavButton setMouseHovering={setMouseHovering} setIsOpen={setIsOpen} isOpen={isOpen} url={'about'}>About</NavButton></li>
                     <li><NavButton setMouseHovering={setMouseHovering} setIsOpen={setIsOpen} isOpen={isOpen} url={'projects'}>Projects</NavButton></li>
-                    <li><NavButton setMouseHovering={setMouseHovering} setIsOpen={setIsOpen} isOpen={isOpen} url={'about'}>Contact</NavButton></li>
+                    <li><NavButton setMouseHovering={setMouseHovering} setIsOpen={setIsOpen} isOpen={isOpen} url={'contact'}>Contact</NavButton></li>
                 </ul>
                 </div>
                 <animated.ul
@@ -61,7 +61,7 @@ export function Navbar({setMouseHovering}) {
                 className="mobileLinks">
                     <li><NavButton setMouseHovering={setMouseHovering} setIsOpen={setIsOpen} isOpen={isOpen} url={'about'}>About</NavButton></li>
                     <li><NavButton setMouseHovering={setMouseHovering} setIsOpen={setIsOpen} isOpen={isOpen} url={'projects'}>Projects</NavButton></li>
-                    <li><NavButton setMouseHovering={setMouseHovering} setIsOpen={setIsOpen} isOpen={isOpen} url={'about'}>Contact</NavButton></li>
+                    <li><NavButton setMouseHovering={setMouseHovering} setIsOpen={setIsOpen} isOpen={isOpen} url={'contact'}>Contact</NavButton></li>
                 </animated.ul>
         </animated.div>
     )

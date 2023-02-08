@@ -9,6 +9,8 @@ export function Contact({setContactPos, scrollY, contactPos, setMouseHovering}) 
     const contactRef = useRef();
 
     const [animateIn, setAnimateIn] = useState(false);
+    const [popLinkedin, setPopLinkedin] = useState(false);
+    const [popGmail, setPopGmail] = useState(false);
 
     useEffect(() => {
         if((contactPos *0.2) + scrollY > contactPos) {
@@ -40,6 +42,41 @@ export function Contact({setContactPos, scrollY, contactPos, setMouseHovering}) 
         })
     }, []);
 
+    //Gmail and Linkedin description animations
+
+    const linkedin = useSpring({
+        opacity: popLinkedin ? 1 : 0,
+        scale: popLinkedin ? 1 : 0,
+        config: {
+            friction: 12,
+            tension: 300
+        }
+    })
+
+    const gmail = useSpring({
+        opacity: popGmail ? 1 : 0,
+        scale: popGmail ? 1 : 0,
+        config: {
+            friction: 12,
+            tension: 300
+        }
+
+    })
+
+    function triggerLinkedin(instruction) {
+        setMouseHovering(instruction);
+        setPopLinkedin(instruction);
+    }
+
+    function triggerGmail(instruction) {
+        setMouseHovering(instruction);
+        setPopGmail(instruction);
+    }
+
+
+
+
+
     return( 
         <animated.section
         style={animateEnter}
@@ -52,19 +89,24 @@ export function Contact({setContactPos, scrollY, contactPos, setMouseHovering}) 
                     <div className="iconContainer">
                         <a href="https://www.linkedin.com/in/stefano-calo0705" target='_blank'><AiFillLinkedin
                         className="contactIcon"
-                        onMouseEnter={() => setMouseHovering(true)}
-                        onMouseLeave={() => setMouseHovering(false)}
+                        onMouseEnter={() => triggerLinkedin(true)}
+                        onMouseLeave={() => triggerLinkedin(false)}
                         /></a>
-                        <animated.span className='contactType'>Linkedin</animated.span>
+                        <animated.span
+                        
+                        style={linkedin}
+                        className='contactType'>Linkedin</animated.span>
                     </div>
                     <div className="iconContainer">
                         <a url="mailto:anyemail@email.com" target='_blank'><SiGmail 
                         className="contactIcon"
                         onClick={() => window.open('https://mail.google.com/mail/?view=cm&fs=1&to=stefano.cal92@gmail.com')}
-                        onMouseEnter={() => setMouseHovering(true)}
-                        onMouseLeave={() => setMouseHovering(false)}
+                        onMouseEnter={() => triggerGmail(true)}
+                        onMouseLeave={() => triggerGmail(false)}
                         /></a>
-                        <animated.span className='contactType'>Gmail</animated.span>
+                        <animated.span
+                        style={gmail}
+                        className='contactType'>Gmail</animated.span>
                     </div>
                 </div>
             </article>

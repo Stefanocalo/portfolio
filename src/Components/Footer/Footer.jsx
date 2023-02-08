@@ -1,8 +1,9 @@
 import React from "react";
+import './Footer.css'
 
 export function Footer() {
     return(
-        <div style={{height: '20rem', backgroundColor: 'black'}}>
+        <div className="footerContainer">
 
         </div>
     )
