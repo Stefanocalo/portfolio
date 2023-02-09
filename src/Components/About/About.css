@@ -40,3 +40,16 @@ article {
     justify-content: center;
     flex-direction: column;
 }
+
+@media only screen and (max-width: 650px) {
+    .aboutSub {
+        width: 90vw;
+    }
+
+    .languageCard {
+        width: 100%;
+    }
+    .languageContainer {
+        width: 100%;
+    }
+}
