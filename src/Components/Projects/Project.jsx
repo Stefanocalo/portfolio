@@ -59,7 +59,7 @@ export function Project({setProjectPos, projectPos, scrollY, setData, setActive,
 
     useEffect(() => {
 
-        if(width <= 1110) {
+        if(width <= 1119) {
             if(!offset) {
                 return
             }

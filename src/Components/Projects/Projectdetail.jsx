@@ -83,7 +83,7 @@ export function ProjectDetail({active, setActive, data, src}) {
                             <div
                             onClick={() => window.open(`${data[5]}`)}
                             className="imgContainer">
-                                <img className="projectPic" src={data[3]} alt='Stefano Calo picture'/>
+                                <img className="detailPic" src={data[3]} alt='Stefano Calo picture'/>
                             </div>
                         </div>
                         <div className="subSecton">

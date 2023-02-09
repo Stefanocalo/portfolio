@@ -42,20 +42,20 @@ export function Card({title, description, tags, src, offset, width, setData, set
         onMouseEnter={() => setExpand(true)}
         onMouseLeave={() => setExpand(false)}
         className="project">
-        <img className="projectPic" src={src} alt='Stefano Calo picture'/>
-        <animated.div
-        style={info}
-        onClick={() => handleClick()}
-        className='info'
-        >
-            <h3 className="projectTitle">{title}</h3>
-            <span className="description">{description}</span>
-            <div className="tagsContainer">
-                {tags.map(tag => (
-                    <span className='language'>{tag}</span>
-                ))}
-            </div>
-        </animated.div>
+            <img className="projectPic" src={src} alt='Stefano Calo picture'/>
+            <animated.div
+            style={info}
+            onClick={() => handleClick()}
+            className='info'
+            >
+                <h3 className="projectTitle">{title}</h3>
+                <span className="description">{description}</span>
+                <div className="tagsContainer">
+                    {tags.map(tag => (
+                        <span className='language'>{tag}</span>
+                    ))}
+                </div>
+            </animated.div>
         </div>
         </>
     )
