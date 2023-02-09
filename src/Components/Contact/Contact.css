@@ -28,3 +28,9 @@
     padding: 0.2rem;
     border-radius: 15px;
 }
+
+@media only screen and (max-width: 900px) {
+    .contactMe {
+        width: 80vw;
+    }
+}

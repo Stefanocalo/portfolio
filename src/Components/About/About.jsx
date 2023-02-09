@@ -1,6 +1,9 @@
 import React, {useState, useRef, useEffect} from "react";
 import { useSpring, animated } from "@react-spring/web";
 import './About.css';
+import { Language } from "./Language";
+
+import {SiHtml5, SiCss3, SiJavascript, SiReact, SiTypescript} from 'react-icons/si';
 
 export function About({setAboutPos, scrollY, aboutPos}) {
 
@@ -45,23 +48,10 @@ export function About({setAboutPos, scrollY, aboutPos}) {
         id="about" className="sectionContainer">
             <h2 className="sectionTitle">.About Me</h2>
             <article>
-                <p >ckanca ikaenfnao nfianfanneoa noafnoafmn oam</p>
-                <p >ckanca ikaenfnao nfianfanneoa noafnoafmn oam</p>
-
-                <p >ckanca ikaenfnao nfianfanneoa noafnoafmn oam</p>
-
-                <p >ckanca ikaenfnao nfianfanneoa noafnoafmn oam</p>
-
-                <p >ckanca ikaenfnao nfianfanneoa noafnoafmn oam</p>
-
-                <p >ckanca ikaenfnao nfianfanneoa noafnoafmn oam</p>
-
-                <p >ckanca ikaenfnao nfianfanneoa noafnoafmn oam</p>
-
-                <p >ckanca ikaenfnao nfianfanneoa noafnoafmn oam</p>
-                <p >ckanca ikaenfnao nfianfanneoa noafnoafmn oam</p>
-
-
+                <div className='aboutSub'>
+                    <h3 className="sub">Language I speak</h3>
+                    <Language icon={<SiHtml5/>}>HTML5</Language>
+                </div>
             </article>
         </animated.section>
     )

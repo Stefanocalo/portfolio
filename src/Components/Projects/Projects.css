@@ -66,7 +66,7 @@
     border: 1px solid rgba(88, 88, 88, 0.3);
     backdrop-filter: blur(4px);
     background-color: rgba(58, 58, 58, 0.1);
-    width: 80%;
+    width: 100%;
     padding: 2rem 1rem;
     border-radius: 15px;
     cursor: pointer;
@@ -103,6 +103,10 @@
     .project {
         width: 90vw;
         height: 25rem
+    }
+
+    .githubWrapper {
+        width: 80vw;
     }
 
     .info {

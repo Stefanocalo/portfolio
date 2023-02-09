@@ -94,7 +94,7 @@ export function Project({setProjectPos, projectPos, scrollY, setData, setActive,
     },[animate])
 
     const git = useSpring({
-        scale: animate ? 1.3 : 1,
+        scale: animate ? 1.1 : 1,
         config: {
             tension: 300,
             friction: 10
