@@ -68,7 +68,6 @@
     right: 0;
     display: flex;
     cursor: pointer;
-    transition: 0.3s;
 }
 
 .detailFooter:hover {

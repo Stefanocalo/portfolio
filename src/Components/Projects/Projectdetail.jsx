@@ -56,6 +56,14 @@ export function ProjectDetail({active, setActive, data, src}) {
         }
     });
 
+    const appear = useSpring({
+        scale: active ? 1 : 0,
+        config: {
+            tension: 300,
+            friction: 10
+        }
+    })
+
     
     return(
         <animated.div
@@ -103,14 +111,16 @@ export function ProjectDetail({active, setActive, data, src}) {
                                 </div>
                                 <a href={data[5]} target='_blank'>{data[5]}</a>
                             </div>
-                            <div className="detailFooter">
+                            <animated.div 
+                            style={appear}
+                            className="detailFooter">
                                 <div 
                                 onClick={() => window.open(`${data[4]}`)}
                                 className="footerDetails">
                                     <AiFillGithub className="linkIcon"/>
                                     <span>Check the code on GitHub</span>
                                 </div>
-                            </div>
+                            </animated.div>
                         </div>
                 </div>
             </div>
