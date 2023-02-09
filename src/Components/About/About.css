@@ -17,3 +17,26 @@ article {
     flex-direction: column;
 }
 
+.aboutSub {
+    width: 100%;
+    color: rgb(58, 58, 58);
+}
+
+.subTitle {
+    font-size: 1.4rem;
+}
+
+.languageContainer {
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.languageCard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

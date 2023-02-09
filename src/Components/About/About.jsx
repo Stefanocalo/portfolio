@@ -5,7 +5,7 @@ import { Language } from "./Language";
 
 import {SiHtml5, SiCss3, SiJavascript, SiReact, SiTypescript} from 'react-icons/si';
 
-export function About({setAboutPos, scrollY, aboutPos}) {
+export function About({setAboutPos, scrollY, aboutPos, setMouseHovering}) {
 
     const aboutRef = useRef();
 
@@ -49,8 +49,17 @@ export function About({setAboutPos, scrollY, aboutPos}) {
             <h2 className="sectionTitle">.About Me</h2>
             <article>
                 <div className='aboutSub'>
-                    <h3 className="sub">Language I speak</h3>
-                    <Language icon={<SiHtml5/>}>HTML5</Language>
+                    <h3 className="subTitle">Language I speak</h3>
+                    <div className="languageContainer">
+                        <Language setMouseHovering={setMouseHovering} icon={<SiHtml5 className="contactIcon"/>}>HTML5</Language>
+                        <Language setMouseHovering={setMouseHovering} icon={<SiCss3 className="contactIcon"/>}>CSS3</Language>
+                        <Language setMouseHovering={setMouseHovering} icon={<SiJavascript className="contactIcon"/>}>JAVASCRIPT</Language>
+                        <Language setMouseHovering={setMouseHovering} icon={<SiTypescript className="contactIcon"/>}>TYPESCRIPT</Language>
+                        <Language setMouseHovering={setMouseHovering} icon={<SiReact className="contactIcon"/>}>REACT</Language>
+                    </div>
+                    <h3 className="subTitle">Some of my skills</h3>
+                    <div className="skillsContainer">
+                    </div>
                 </div>
             </article>
         </animated.section>
