@@ -52,7 +52,7 @@ export function About({setAboutPos, scrollY, aboutPos, setMouseHovering}) {
                 <div className="myself">
                     <p>I am a tech enthusiast and have always been very passionate about new technologies.</p>
                     <p>I love coding , and, after many year in the hospitality industry I’ve decided to cultivate my passion and make it a living!</p>
-                    <p>Dedication, ambition, and precision are some of my strong traits. Love to work in team and I always am focused to reach prefixed targets.</p>
+                    <p>Dedication, ambition, and precision are some of my strong traits. Love to work in team and I always am up for new challenges to expand my knowledge.</p>
                 </div>
             </article>
             <article>
