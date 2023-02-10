@@ -41,6 +41,27 @@ article {
     flex-direction: column;
 }
 
+.skillsContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.skill {
+    padding: 0.4rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: rgb(240, 240, 240);
+    background-color: rgb(58, 58, 58);
+    border-radius: 15px;
+}
+
+.myself {
+    font-size: 1.2rem;
+}
+
 @media only screen and (max-width: 650px) {
     .aboutSub {
         width: 90vw;
@@ -51,5 +72,8 @@ article {
     }
     .languageContainer {
         width: 100%;
+    }
+    .myself {
+        width: 90vw;
     }
 }

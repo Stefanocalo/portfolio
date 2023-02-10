@@ -29,13 +29,28 @@
     margin: 0 1rem;
     cursor: pointer;
     color: rgb(58, 58, 58);
+    padding: 1rem;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.footerIcon:hover {
+    scale: 1.5;
 }
 
 .footerLink {
     text-decoration: none;
     cursor: pointer;
     color: rgb(58, 58, 58);
-    margin: 0 1rem;
+    margin: 0 1.2rem;
+    border-radius: 8px;
+    padding: 0.2rem;
+    transition: 0.4s;
+}
+
+.footerLink:hover {
+    color: rgb(35, 35, 35);
+    scale: 1.3;
 }
 
 

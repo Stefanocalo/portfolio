@@ -14,13 +14,11 @@ export function Background({backgroundIndex}) {
         } else {
             if(multiplyer !== 22) {
                 setMultiplyer(22);
+                setPadding(90)
             }
         }
 
     },[window.innerWidth]);
-
-
-    console.log(multiplyer)
 
     const background = useSpring({
         transform: `translateX(-${multiplyer * backgroundIndex}%)`,

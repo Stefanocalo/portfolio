@@ -8,7 +8,6 @@
 .backgroundContainer {
     position: fixed;
     top: 20rem;
-    padding-left: 90rem;
     z-index: -100
 }
 
