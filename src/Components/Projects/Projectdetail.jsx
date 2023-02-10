@@ -58,9 +58,10 @@ export function ProjectDetail({active, setActive, data, src}) {
 
     const appear = useSpring({
         scale: active ? 1 : 0,
+        right: active ? '0%' : '-110%',
         config: {
-            tension: 300,
-            friction: 10
+            tension: 150,
+            friction: 20
         }
     })
 
@@ -70,7 +71,8 @@ export function ProjectDetail({active, setActive, data, src}) {
         style={modal}
         className='projectExpandContainer'>
             <div className="projectWrapper">
-                <div
+                <animated.div
+                style={appear}
                 onClick={() => setActive(false)} 
                 onMouseEnter={() => setAnimate(true)}
                 className="nav">
@@ -83,7 +85,7 @@ export function ProjectDetail({active, setActive, data, src}) {
                     <animated.span 
                     style={back}
                     className="back">back to projects</animated.span>
-                </div>
+                </animated.div>
                     <div className="brief">
                         <div className='subSection'>
                             <h3 className="projectTitle">{data[0]}</h3>
