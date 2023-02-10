@@ -11,3 +11,9 @@
     padding-left: 90rem;
     z-index: -100
 }
+
+@media only screen and (max-width: 900px){
+    .background {
+        font-size: 9rem;
+    }
+}

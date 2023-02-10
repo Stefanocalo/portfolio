@@ -1,12 +1,30 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import { useSpring, animated } from "@react-spring/web";
 import './Background.css'
 
 export function Background({backgroundIndex}) {
 
+    const [multiplyer, setMultiplyer] = useState(22)
+    const [padding, setPadding] = useState(90)
+
+    useEffect(() => {
+        if(window.innerWidth <= 900) {
+            setMultiplyer(23)
+            setPadding(42)
+        } else {
+            if(multiplyer !== 22) {
+                setMultiplyer(22);
+            }
+        }
+
+    },[window.innerWidth]);
+
+
+    console.log(multiplyer)
 
     const background = useSpring({
-        transform: `translateX(-${22 * backgroundIndex}%)`,
+        transform: `translateX(-${multiplyer * backgroundIndex}%)`,
+        paddingLeft: `${padding}rem`,
         config: {
             tension: 200,
             friction: 13,
