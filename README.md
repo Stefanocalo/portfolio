@@ -10,10 +10,10 @@
     <img src="./media/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">Memory Cards</h3>
+<h3 align="center">Stefano Calo portfolio</h3>
 
   <p align="center">
-    A simple Rick & Morty themed memory game.
+    My very personal portfolio!
     <br />
     <a href="https://github.com/Stefanocalo/portfolio"><strong>Explore the docs »</strong></a>
     <br />
@@ -45,7 +45,6 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
@@ -56,9 +55,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<img src="./media/example.png">
+<img src="./media/portfolio.png">
 
-A beautiful Rick & Morty themed memory game. Keep your mind sharp with this game!
+My very personal portfolio designed around me!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -103,21 +102,6 @@ This is an example of how to list things you need to use the software and how to
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Just press new game to start the match. Every time you flip to card your score will go up by 1 move. 
-
-<img align="center" src="./media/new.gif" alt="example" width="400" height="260">
-
-The game will also keep your best score in memory! Let's see if you can beat your own best!
-
-<img align="center" src="media/win.gif" alt="second example" width="400" height="260">
-
-
-<br>
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
 ## Contributing
