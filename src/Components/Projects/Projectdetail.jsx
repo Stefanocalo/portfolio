@@ -10,7 +10,7 @@ import todo from '../media/todo.png';
 import memory from '../media/memory.png';
 import portfolio from '../media/portfolio.png';
 
-export function ProjectDetail({active, setActive, data, src}) {
+export function ProjectDetail({active, setActive, data}) {
 
     const [animate, setAnimate] = useState(false);
 
@@ -59,10 +59,6 @@ export function ProjectDetail({active, setActive, data, src}) {
     const appear = useSpring({
         scale: active ? 1 : 0,
         right: active ? '0%' : '-110%',
-        config: {
-            tension: 150,
-            friction: 20
-        }
     })
 
     
@@ -98,6 +94,7 @@ export function ProjectDetail({active, setActive, data, src}) {
                         </div>
                         <div className="subSecton">
                             <span className="sub">About</span>
+                            <p>{data[6]}</p>
                         </div>
                         <div className="subSection">
                             <span className="sub">Technologies</span>

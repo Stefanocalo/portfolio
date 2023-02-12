@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import { useSpring, animated } from "@react-spring/web";
 
-export function Card({title, description, tags, src, offset, width, setData, setActive, code, link}) {
+export function Card({title, description, tags, src, offset, width, setData, setActive, code, link, about}) {
 
     const [expand,setExpand] = useState(false);
 
@@ -31,7 +31,7 @@ export function Card({title, description, tags, src, offset, width, setData, set
 
     function handleClick() {
         setActive(true);
-        setData([title, description, tags, src, code, link]);
+        setData([title, description, tags, src, code, link, about]);
     }
 
 

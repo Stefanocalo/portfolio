@@ -119,8 +119,9 @@ export function Project({setProjectPos, projectPos, scrollY, setData, setActive,
                     src={reddit}
                     code={'https://github.com/Stefanocalo/Reddit-Client'}
                     link={'https://reddit-lite-client.netlify.app'}
-                    description={'A Reddit Client that let you explre the social without the need to log in.'}
-                    tags={['React', 'JavaScript', 'CSS']}
+                    description={'A Reddit Client.'}
+                    tags={['React', 'Redux', 'JavaScript', 'CSS']}
+                    about={'A platform made to let the user explore Reddit without the need to log in!'}
                     />
                     <Card 
                     setData={setData}
@@ -132,7 +133,8 @@ export function Project({setProjectPos, projectPos, scrollY, setData, setActive,
                     link={'https://to-do-task-app.netlify.app'}
                     code={'https://github.com/Stefanocalo/to-do-app'}
                     description={'A to-do app to help you avoid procrastination.'}
-                    tags={['React', 'JavaScript', 'CSS']}
+                    tags={['React', 'Redux', 'JavaScript', 'CSS']}
+                    about={'A To Do App to make your life easier.Feel free to organise your tasks with different tags and choose to filter a particular task if you want to focus on particular tasks.From today also supporting theming!Choose between a variety of different light and dark themes.'}
                     />
                     <Card
                     setData={setData}
@@ -144,7 +146,8 @@ export function Project({setProjectPos, projectPos, scrollY, setData, setActive,
                     code={'https://github.com/Stefanocalo/weather-app'}
                     link={'https://city-forecast-app.netlify.app'}
                     description={`A complete weather app. Let's check if we need a jumper or a t-shirt.`}
-                    tags={['React', 'JavaScript', 'CSS']}
+                    tags={['React', 'Redux', 'JavaScript', 'CSS']}
+                    about={'A simple but effective weather app using third party api. Feel free to change units between Celsius and fahrenheit, add, remove bookmark and check the weather for the upcoming 2 days.'}
                     />
                     <Card
                     setData={setData}
@@ -157,6 +160,7 @@ export function Project({setProjectPos, projectPos, scrollY, setData, setActive,
                     link={'https://rick-memory.netlify.app'}
                     description={'A simple game to keep your mind sharp.'}
                     tags={['React', 'JavaScript', 'CSS']}
+                    about={'A beautiful Rick & Morty themed memory game build using React!'}
                     />
                     <Card
                     setData={setData}
@@ -169,6 +173,7 @@ export function Project({setProjectPos, projectPos, scrollY, setData, setActive,
                     link={'https://stefanocalo.me'}
                     description={'A glimpse of me.'}
                     tags={['React', 'JavaScript', 'CSS']}
+                    about={'This is my very perosonal portfolio to introduce myself.'}
                     />
                 </div>
                 <animated.div
