@@ -4,7 +4,7 @@ import './About.css';
 import { Language } from "./Language";
 import { Skills } from "./Skills";
 
-import {SiHtml5, SiCss3, SiJavascript, SiReact, SiTypescript} from 'react-icons/si';
+import {SiHtml5, SiCss3, SiJavascript, SiReact, SiTypescript, SiRedux} from 'react-icons/si';
 
 export function About({setAboutPos, scrollY, aboutPos, setMouseHovering}) {
 
@@ -64,6 +64,7 @@ export function About({setAboutPos, scrollY, aboutPos, setMouseHovering}) {
                         <Language setMouseHovering={setMouseHovering} icon={<SiJavascript className="contactIcon"/>}>JAVASCRIPT</Language>
                         <Language setMouseHovering={setMouseHovering} icon={<SiTypescript className="contactIcon"/>}>TYPESCRIPT</Language>
                         <Language setMouseHovering={setMouseHovering} icon={<SiReact className="contactIcon"/>}>REACT</Language>
+                        <Language setMouseHovering={setMouseHovering} icon={<SiRedux className="contactIcon"/>}>REDUX</Language>
                     </div>
                     <h3 className="subTitle">Some of my skills</h3>
                         <Skills aboutPos={aboutPos} scrollY={scrollY}/>
