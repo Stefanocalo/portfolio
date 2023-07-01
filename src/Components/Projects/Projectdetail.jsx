@@ -90,7 +90,7 @@ export function ProjectDetail({active, setActive, data}) {
                             <h3 className="projectTitle">{data[0]}</h3>
                             <span className="description">{data[1]}</span> 
                             <div
-                            onClick={() => data[5].length > 0 && window.open(`${data[5]}`)}
+                            onClick={() => data[5]?.length > 0 && window.open(`${data[5]}`)}
                             className="imgContainer">
                                 <img className="detailPic" src={data[3]} alt='Stefano Calo picture'/>
                             </div>
@@ -107,7 +107,7 @@ export function ProjectDetail({active, setActive, data}) {
                               ))}
                             </div>
                             {
-                                data[5].length > 0 &&
+                                data[5]?.length > 0 &&
                                 <div className="subSecton website">
                                 <div className="siteLink">
                                     <span className="sub">Website </span>
@@ -120,10 +120,10 @@ export function ProjectDetail({active, setActive, data}) {
                             style={appear}
                             className="detailFooter">
                                 <div 
-                                onClick={() => data[4].length > 0 && window.open(`${data[4]}`)}
+                                onClick={() => data[4]?.length > 0 && window.open(`${data[4]}`)}
                                 className="footerDetails">
                                     <AiFillGithub className="linkIcon"/>
-                                    <span>{data[4].length > 0 ? 'Check the code on GitHub' : 'Code not available'}</span>
+                                    <span>{data[4]?.length > 0 ? 'Check the code on GitHub' : 'Code not available'}</span>
                                 </div>
                             </animated.div>
                         </div>
