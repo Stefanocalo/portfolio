@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import { useSpring, animated } from "@react-spring/web";
 
 export function Language({icon, children, setMouseHovering}) {

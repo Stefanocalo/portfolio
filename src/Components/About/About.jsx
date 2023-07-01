@@ -64,6 +64,7 @@ export function About({setAboutPos, scrollY, aboutPos, setMouseHovering}) {
                         <Language setMouseHovering={setMouseHovering} icon={<SiJavascript className="contactIcon"/>}>JAVASCRIPT</Language>
                         <Language setMouseHovering={setMouseHovering} icon={<SiTypescript className="contactIcon"/>}>TYPESCRIPT</Language>
                         <Language setMouseHovering={setMouseHovering} icon={<SiReact className="contactIcon"/>}>REACT</Language>
+                        <Language setMouseHovering={setMouseHovering} icon={<SiReact className="contactIcon"/>}>REACT Native</Language>
                         <Language setMouseHovering={setMouseHovering} icon={<SiRedux className="contactIcon"/>}>REDUX</Language>
                     </div>
                     <h3 className="subTitle">Some of my skills</h3>
