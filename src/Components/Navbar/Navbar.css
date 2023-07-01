@@ -42,8 +42,8 @@
         top: 0;
         z-index: 99;
         height: 3rem;
-        background-color: rgba(88, 88, 88, 0.3);
-        backdrop-filter: blur(18px);
+        background-color: rgba(157, 157, 157, 0.3);
+        backdrop-filter: blur(25px);
         padding-top: 4vh;
         align-items: flex-start;
         overflow: hidden;
@@ -55,9 +55,10 @@
         right: 0;
         width: 100vw;
         padding: 0;
-        margin: 0;
         flex-direction: column; 
         display: flex;
+        justify-content: space-around;
+        max-height: 50vh;
     }
 
     .navbarLinks {
