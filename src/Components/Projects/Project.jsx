@@ -6,7 +6,7 @@ import reddit from '../media/reddit.png'
 import weather from '../media/weather.png';
 import todo from '../media/todo.png';
 import memory from '../media/memory.png';
-import portfolio from '../media/portfolio.png';
+import cea from '../media/cea.png';
 import { AiFillGithub } from "react-icons/ai";
 
 export function Project({setProjectPos, projectPos, scrollY, setData, setActive, setMouseHovering}) {
@@ -109,25 +109,39 @@ export function Project({setProjectPos, projectPos, scrollY, setData, setActive,
             <h2 className="sectionTitle">.Projects</h2>
             <article>
               <div className="projectsContainer">
-                    <Card
+                <Card
                     setData={setData}
                     setActive={setActive}
                     scrollY={scrollY}
                     width={width} 
                     offset={false}
+                    title={'CEA'}
+                    src={cea}
+                    code={''}
+                    link={''}
+                    description={'An effective worksite and acceptances manager.'}
+                    tags={['React Native', 'Redux', 'TypeScript']}
+                    about={'Manage with ease materials, worksites and acceptances.'}
+                />
+                <Card
+                    setData={setData}
+                    setActive={setActive}
+                    scrollY={scrollY}
+                    width={width} 
+                    offset={offset}
                     title={'Reddit Client'}
                     src={reddit}
                     code={'https://github.com/Stefanocalo/Reddit-Client'}
-                    link={'https://reddit-lite-client.netlify.app'}
+                    link={'https://redditcli.netlify.app'}
                     description={'A Reddit Client.'}
                     tags={['React', 'Redux', 'JavaScript', 'CSS']}
                     about={'A platform made to let the user explore Reddit without the need to log in!'}
-                    />
-                    <Card 
+                />
+                <Card 
                     setData={setData}
                     setActive={setActive}
                     width={width} 
-                    offset={offset}
+                    offset={false}
                     title={'To-do App'}
                     src={todo}
                     link={'https://to-do-task-app.netlify.app'}
@@ -135,12 +149,12 @@ export function Project({setProjectPos, projectPos, scrollY, setData, setActive,
                     description={'A to-do app to help you avoid procrastination.'}
                     tags={['React', 'Redux', 'JavaScript', 'CSS']}
                     about={'A To Do App to make your life easier.Feel free to organise your tasks with different tags and choose to filter a particular task if you want to focus on particular tasks.From today also supporting theming!Choose between a variety of different light and dark themes.'}
-                    />
-                    <Card
+                />
+                <Card
                     setData={setData}
                     setActive={setActive}
                     width={width}
-                    offset={false}
+                    offset={offset}
                     title={'Weather App'}
                     src={weather}
                     code={'https://github.com/Stefanocalo/weather-app'}
@@ -148,12 +162,12 @@ export function Project({setProjectPos, projectPos, scrollY, setData, setActive,
                     description={`A complete weather app. Let's check if we need a jumper or a t-shirt.`}
                     tags={['React', 'Redux', 'JavaScript', 'CSS']}
                     about={'A simple but effective weather app using third party api. Feel free to change units between Celsius and fahrenheit, add, remove bookmark and check the weather for the upcoming 2 days.'}
-                    />
-                    <Card
+                />
+                <Card
                     setData={setData}
                     setActive={setActive} 
                     width={width}
-                    offset={offset}
+                    offset={false}
                     title={'Memory Game'}
                     src={memory}
                     code={'https://github.com/Stefanocalo/memory-game'}
@@ -161,20 +175,7 @@ export function Project({setProjectPos, projectPos, scrollY, setData, setActive,
                     description={'A simple game to keep your mind sharp.'}
                     tags={['React', 'JavaScript', 'CSS']}
                     about={'A beautiful Rick & Morty themed memory game build using React!'}
-                    />
-                    <Card
-                    setData={setData}
-                    setActive={setActive}
-                    width={width} 
-                    offset={false}
-                    title={'Personal Portfolio'}
-                    src={portfolio}
-                    code={'https://github.com/Stefanocalo/portfolio'}
-                    link={'https://stefanocalo.me'}
-                    description={'A glimpse of me.'}
-                    tags={['React', 'JavaScript', 'CSS']}
-                    about={'This is my very perosonal portfolio to introduce myself.'}
-                    />
+                />
                 </div>
                 <animated.div
                 onClick={() => window.open(`https://github.com/Stefanocalo`)}

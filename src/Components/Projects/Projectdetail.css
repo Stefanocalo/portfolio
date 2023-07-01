@@ -46,6 +46,7 @@
 
 .subSection {
     margin: 3rem 0;
+    padding-top: 1rem;
     
 }
 
@@ -56,6 +57,7 @@
 
 .tags {
     margin: 1rem 0;
+    padding-bottom: 1rem;
     display: flex;
 }
 
@@ -126,6 +128,12 @@
     .nav {
         width: 92%;
         padding: 4%;
+    }
+    .subSection {
+        padding-top: 0;
+    }
+    .tags {
+        padding-bottom: 2rem;
     }
     
 }

@@ -4,11 +4,7 @@ import './Projectdetail.css';
 import {IoMdArrowRoundBack} from 'react-icons/io';
 import {GiWorld} from 'react-icons/gi';
 import {AiFillGithub} from 'react-icons/ai';
-import reddit from '../media/reddit.png'
-import weather from '../media/weather.png';
-import todo from '../media/todo.png';
-import memory from '../media/memory.png';
-import portfolio from '../media/portfolio.png';
+
 
 export function ProjectDetail({active, setActive, data}) {
 
@@ -61,10 +57,17 @@ export function ProjectDetail({active, setActive, data}) {
         right: active ? '0%' : '-110%',
     })
 
+    const focusOut = document.getElementById('id01');
+    function closeDetail(event) {
+        event.target == focusOut && setActive(false);
+    }
+
     
     return(
         <animated.div
         style={modal}
+        onClick={(e) => closeDetail(e)}
+        id='id01'
         className='projectExpandContainer'>
             <div className="projectWrapper">
                 <animated.div
@@ -81,13 +84,13 @@ export function ProjectDetail({active, setActive, data}) {
                     <animated.span 
                     style={back}
                     className="back">back to projects</animated.span>
-                </animated.div>
+                    </animated.div>
                     <div className="brief">
                         <div className='subSection'>
                             <h3 className="projectTitle">{data[0]}</h3>
                             <span className="description">{data[1]}</span> 
                             <div
-                            onClick={() => window.open(`${data[5]}`)}
+                            onClick={() => data[5].length > 0 && window.open(`${data[5]}`)}
                             className="imgContainer">
                                 <img className="detailPic" src={data[3]} alt='Stefano Calo picture'/>
                             </div>
@@ -103,25 +106,28 @@ export function ProjectDetail({active, setActive, data}) {
                                     <span key={index} className='language'>{tag}</span>
                               ))}
                             </div>
-                            <div className="subSecton website">
+                            {
+                                data[5].length > 0 &&
+                                <div className="subSecton website">
                                 <div className="siteLink">
                                     <span className="sub">Website </span>
                                     <GiWorld />
                                 </div>
                                 <a href={data[5]} target='_blank'>{data[5]}</a>
-                            </div>
+                                </div>
+                            }
                             <animated.div 
                             style={appear}
                             className="detailFooter">
                                 <div 
-                                onClick={() => window.open(`${data[4]}`)}
+                                onClick={() => data[4].length > 0 && window.open(`${data[4]}`)}
                                 className="footerDetails">
                                     <AiFillGithub className="linkIcon"/>
-                                    <span>Check the code on GitHub</span>
+                                    <span>{data[4].length > 0 ? 'Check the code on GitHub' : 'Code not available'}</span>
                                 </div>
                             </animated.div>
                         </div>
-                </div>
+                    </div>
             </div>
         </animated.div>
     )
